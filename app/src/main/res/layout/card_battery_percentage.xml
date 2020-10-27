@@ -13,19 +13,17 @@
     <!--            name="viewModel"-->
     <!--            type="com.google.samples.apps.sunflower.viewmodels.PlantAndGardenPlantingsViewModel"/>-->
     <!--    </data>-->
-    <data>
-        <import type="android.view.View"/>
+<!--    <data>-->
+<!--        <import type="android.view.View"/>-->
 <!--        <variable-->
 <!--            name="viewModel"-->
 <!--            type="com.viewmodel.MainViewModel" />-->
-    </data>
+<!--    </data>-->
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="250dp"
-        android:layout_marginRight="250dp"
-        app:cardBackgroundColor="#2a2e39"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="22dp"
         app:cardElevation="2dp"
         app:cardForegroundColor="#00FFFFFF"
@@ -45,96 +43,138 @@
                 android:id="@+id/heading__height_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:fontFamily="@font/raleway"
+                android:fontFamily="@font/rokkitt"
                 android:text="Battery Percentage"
-                android:textColor="@color/green"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/height__tv__height_card"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            android:text="@{String.format(`%.2f`,viewModel.battery) + ` m`,default = `0.00 m`}"-->
+
 
             <TextView
                 android:id="@+id/height__tv__height_card"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/roboto_light"
+                android:gravity="center_vertical"
                 android:includeFontPadding="false"
-                android:text="@{String.format(`%.2f`,viewModel.height) + ` m`,default = `0.00 m`}"
-                android:textColor="@color/green"
-                app:autoSizeTextType="uniform"
-                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
-                app:layout_constraintDimensionRatio="w,3:1"
-                app:layout_constraintEnd_toStartOf="@+id/materialCardView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView2"
-                tools:text="50 %" />
+                android:textColor="@color/black"
+                android:textSize="60sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio=""
+                app:layout_constraintStart_toStartOf="@+id/heading__height_card"
+                app:layout_constraintTop_toBottomOf="@+id/heading__height_card"
+                tools:text="15%" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="3dp"
-                android:background="#42c440"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:background="#00000000"
+                app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+                app:layout_constraintDimensionRatio="w,"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="@+id/height__tv__height_card"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:background="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+                app:layout_constraintDimensionRatio="w,"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/height__tv__height_card"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:background="#00000000"
                 app:layout_constraintBottom_toTopOf="@+id/materialCardView"
                 app:layout_constraintDimensionRatio="w,"
                 app:layout_constraintEnd_toEndOf="@+id/materialCardView"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_weight="5"
-                app:layout_constraintStart_toStartOf="@+id/materialCardView"
-                app:layout_constraintTop_toBottomOf="@+id/heading__height_card"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/height__tv__height_card"
                 app:layout_constraintVertical_chainStyle="packed" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView"
                 android:layout_width="0dp"
-                android:layout_height="65dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="#00FFFFFF"
                 app:cardCornerRadius="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/height__tv__height_card"
                 app:layout_constraintDimensionRatio="1:2.5"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/height__tv__height_card"
                 app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                app:strokeColor="#42c440"
+                app:strokeColor="#000000"
                 app:strokeWidth="2dp" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/battery_uncharge__iv__card_battery_percentage"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/round_rectangle"
-                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
-                app:layout_constraintDimensionRatio="w,"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:background="#00FFFFFF"
+                app:layout_constraintBottom_toTopOf="@id/battery_charge__iv__card_battery_percentage"
                 app:layout_constraintEnd_toEndOf="@+id/materialCardView"
-                app:layout_constraintHorizontal_bias="0.4"
-                app:layout_constraintHorizontal_weight="5"
                 app:layout_constraintStart_toStartOf="@+id/materialCardView"
                 app:layout_constraintTop_toTopOf="@+id/materialCardView"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintVertical_weight="1" />
 
+            <ImageView
+                android:id="@+id/battery_charge__iv__card_battery_percentage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/round_rectangle"
+                android:tint="@android:color/holo_red_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+                app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                app:layout_constraintTop_toBottomOf="@+id/battery_uncharge__iv__card_battery_percentage"
+                app:layout_constraintVertical_weight="0.25" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
